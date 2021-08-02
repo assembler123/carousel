@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>Products</li>
+            <li><b>Awards</b></li>
+            <li>Warranty Claim</li>
+        </ul>
+    </div>
+    <div class="hero">
+        <div id="main-car">
+            <div class="one-car">
+                <h1>World Class Cutting Edge Technology for EV: That makes your life easy and safe for <span>enviroment</span></h1>
+            </div>
+            <div class="two-car">
+                <h1>World Class Cutting Edge Technology for EV: That makes your life easy and safe for <span>enviroment</span></h1>
+            </div>
+            
+            <div class="three-car">
+                <h1>World Class Cutting Edge Technology for EV: That makes your life easy and safe for <span>enviroment</span></h1>
+            </div>
+            <div class="four-car">
+                <h1>World Class Cutting Edge Technology for EV: That makes your life easy and safe for <span>enviroment</span></h1>
+            </div>
+            
+        </div>
+        <div id="show-block">
+            <i class="fas fa-square"></i><i class="far fa-square"></i><i class="far fa-square"></i><i class="far fa-square"></i>
+        </div>
+    </div>
+</body>
+
+</html>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: Roboto;
+    }
+    .nav ul {
+        list-style: none;
+        padding:10px;
+    }
+    .nav ul li {
+        padding: 10px;        
+        font-size: 1.5rem;
+        display: inline-block;
+    }
+    .nav ul li b{
+        color:orange
+    }
+    .one-car , .two-car , .three-car,.four-car{
+        min-width: 100vw;
+        background-size: cover;
+        min-height: 700px;
+        background: linear-gradient(#32323271,#32323271),url("https://images.pexels.com/photos/1191377/pexels-photo-1191377.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+        background-position: top;
+        position: relative;
+        letter-spacing: 2.5px;
+    }
+    .two-car{
+        background: linear-gradient(#32323271,#32323271),url("https://images.pexels.com/photos/942595/pexels-photo-942595.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    }
+    .three-car{
+        background: linear-gradient(#32323271,#32323271),url("https://images.pexels.com/photos/845588/pexels-photo-845588.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    }
+    .four-car{
+        background: linear-gradient(#32323271,#32323271),url("https://images.pexels.com/photos/1590581/pexels-photo-1590581.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");       
+    }
+    .three-car h1{
+        position: absolute;
+        bottom: 0;
+        padding: 100px;
+        font-weight: 500;
+        font-size: 3.7rem;
+        color: #f1f1f1;
+        text-shadow: 0.5px 0.5px #d1d1d1;    
+    }
+    .four-car h1{
+        position: absolute;
+        bottom: 0;
+        padding: 100px;
+        font-weight: 500;
+        font-size: 3.7rem;
+        color: #f1f1f1;
+        text-shadow: 0.5px 0.5px #d1d1d1;
+    
+    }
+    .two-car h1{
+        position: absolute;
+        bottom: 0;
+        padding: 100px;
+        font-weight: 500;
+        font-size: 3.7rem;
+        color: #f1f1f1;
+        text-shadow: 0.5px 0.5px #d1d1d1;
+    }
+    .one-car h1 {
+        position: absolute;
+        bottom: 0;
+        padding: 100px;
+        color: #f1f1f1;
+        font-size: 3.7rem;
+        font-weight: 500;
+        text-shadow: 0.5px 0.5px #d1d1d1;
+    }
+    .one-car span{
+        padding-left: 10px;
+        padding-right: 10px;
+        background: #1dd1a1;
+    }
+    .hero{
+        overflow:hidden;
+        position: relative;
+    }
+    #main-car{
+        transition: all linear 0.3s;
+        display: flex;
+    }
+    #show-block{
+        position: absolute;
+        font-size: 1.6rem;
+        color: #f1f1f1;
+        z-index: 2;
+        bottom:0;
+        padding-bottom:30px;
+        padding-left: 100px;
+    }
+    #show-block i {
+        padding-right: 10px;
+        text-shadow: 0.5px 0.5px #323232;
+    }
+</style>
+<script>
+    let x = 0;
+    setInterval(()=>{
+        document.getElementById('main-car').style = `transform:translateX(${-(x*100)}%)` 
+        
+        x+=1;
+        let set = '';
+        for(let i = 0 ; i < 4 ; i++ ){
+            
+            if( i == x-1){
+                set += '<i class="fas fa-square"></i>'
+            }    
+            else{
+                set += '<i class="far fa-square"></i>'
+
+            }
+        }
+        if(x== 4){
+            x=0;
+        }
+        document.getElementById('show-block').innerHTML = set;
+    },2000)
+</script>
